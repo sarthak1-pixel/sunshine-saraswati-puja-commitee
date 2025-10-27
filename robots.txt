@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sarthak1-pixel.github.io/sunshine-saraswati-puja-commitee/sitemap.xml
