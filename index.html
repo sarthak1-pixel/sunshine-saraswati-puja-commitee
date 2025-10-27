@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sunshine Enclave Saraswati Puja Committee | Celebrating Knowledge & Culture</title>
+    <meta name="description" content="Official website of Sunshine Enclave Saraswati Puja Committee. Established 2014. Dedicated to preserving and celebrating the art, wisdom, and traditions of Maa Saraswati." />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* Professional Color Palette: Purity, Wisdom, Tradition */
+        :root {
+            --primary-yellow: #FFB703; /* Deep, rich Saffron/Gold */
+            --primary-dark: #1D3557;   /* Elegant Navy Blue/Deep Maroon alternative */
+            --accent-red: #E63946;     /* Subtle Vermillion touch */
+            --background-light: #F8F9FA; /* Off-white for section backgrounds */
+            --text-color: #495057;     /* High-contrast dark grey */
+            --white: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Base & Reset */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; background: var(--background-light); color: var(--text-color); line-height: 1.6; overflow-x: hidden; }
+        a { text-decoration: none; color: var(--primary-yellow); transition: color 0.3s; }
+        a:hover { color: var(--accent-red); }
+
+        /* Navigation */
+        .header-nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            padding: 15px 30px;
+        }
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-area {
+            font-family: 'Merriweather', serif;
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: var(--primary-dark);
+        }
+        nav a {
+            margin-left: 30px;
+            color: var(--primary-dark);
+            font-weight: 600;
+            padding: 5px 0;
+            border-bottom: 2px solid transparent;
+        }
+        nav a:hover {
+            color: var(--primary-yellow);
+            border-bottom: 2px solid var(--primary-yellow);
+        }
+        
+        /* Hero Section (The professional 'Banner') */
+        .hero {
+            height: 85vh; /* Sets a professional height */
+            background: linear-gradient(135deg, rgba(29, 53, 87, 0.9), rgba(255, 183, 3, 0.8)), url('hero-background.jpg'); /* Placeholder image for professional background */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+        }
+        .hero-content {
+            max-width: 900px;
+            padding: 0 20px;
+        }
+        .hero h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 3.8rem;
+            margin-bottom: 10px;
+            font-weight: 900;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .hero p {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-yellow);
+            color: var(--primary-dark);
+            padding: 15px 35px;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 20px rgba(255, 183, 3, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(255, 183, 3, 0.6);
+            background-color: #FFC300;
+            color: var(--primary-dark);
+        }
+
+        /* Section Styling */
+        main { max-width: 1200px; margin: 50px auto; padding: 0 30px; }
+        section { padding: 80px 0; }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .section-title h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 3rem;
+            color: var(--primary-dark);
+            margin: 0;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -15px;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 4px;
+            background-color: var(--primary-yellow);
+            border-radius: 2px;
+        }
+
+        /* About Section (Two-Column Layout) */
+        .about-content {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            padding: 0 5%;
+        }
+        .about-text { flex: 1; }
+        .about-text p { font-size: 1.05rem; text-align: justify; }
+        .about-image {
+            flex: 1;
+            max-width: 400px;
+            text-align: center;
+        }
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Events Section (Grid Layout) */
+        #events { background-color: var(--white); }
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        .event-card {
+            background: var(--background-light);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            border-top: 5px solid var(--primary-yellow);
+            transition: all 0.4s;
+        }
+        .event-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-top-color: var(--accent-red);
+        }
+        .event-card h3 {
+            font-family: 'Merriweather', serif;
+            color: var(--primary-dark);
+            margin-top: 0;
+            font-size: 1.8rem;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 10px;
+        }
+        .event-card .details { display: flex; align-items: center; margin-top: 15px; color: var(--text-color); font-weight: 600;}
+        .event-card .details i { margin-right: 10px; color: var(--primary-yellow); font-size: 1.2rem; }
+
+        /* Gallery Section (Photo Grid) */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.4s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Contribute Section (Focus Element) */
+        .contribute-box {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 60px 40px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 50px auto;
+        }
+        .contribute-box h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.5rem;
+            margin-top: 0;
+            color: var(--primary-yellow);
+        }
+        .contribute-box p {
+            max-width: 700px;
+            margin: 20px auto 40px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .contribute-box .cta-button {
+            background-color: var(--accent-red);
+            color: var(--white);
+            box-shadow: 0 8px 20px rgba(230, 57, 70, 0.4);
+        }
+        .contribute-box .cta-button:hover {
+            background-color: #FA505F;
+            box-shadow: 0 12px 25px rgba(230, 57, 70, 0.6);
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+        .contact-info {
+            flex: 1;
+            padding: 20px;
+        }
+        .contact-info h4 {
+            color: var(--primary-dark);
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        .contact-info i {
+            font-size: 2rem;
+            color: var(--primary-yellow);
+            margin-bottom: 10px;
+        }
+        .contact-info p strong { color: var(--primary-dark); }
+
+
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .footer-logo {
+            font-family: 'Merriweather', serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--primary-yellow);
+            margin-bottom: 20px;
+        }
+        .social-links a {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            opacity: 0.7;
+        }
+        .social-links a:hover {
+            color: var(--primary-yellow);
+            opacity: 1;
+        }
+        .footer-text {
+            margin-top: 20px;
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 992px) {
+            .hero h1 { font-size: 3rem; }
+            .about-content { flex-direction: column; text-align: center; }
+            .about-image { order: -1; margin-bottom: 30px; }
+            .nav-container { flex-direction: column; }
+            nav a { margin: 0 10px; font-size: 0.95rem; }
+            .contact-grid { flex-direction: column; gap: 30px; }
+        }
+        @media (max-width: 768px) {
+            .hero { height: 70vh; }
+            .hero h1 { font-size: 2.5rem; }
+            .header-nav { padding: 10px 20px; }
+            .events-grid { grid-template-columns: 1fr; }
+            .section-title h2 { font-size: 2.2rem; }
+            .contribute-box { padding: 40px 20px; }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="header-nav">
+        <div class="nav-container">
+            <div class="logo-area">Sunshine Puja Committee</div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#events">Events</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contribute">Contribute</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Celebrating Wisdom, Music & Culture</h1>
+            <p>Welcome to the Sunshine Enclave Saraswati Puja Committee. United in devotion since 2014.</p>
+            <a href="#events" class="cta-button">View Event Schedule <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <main>
+        
+        <section id="about">
+            <div class="section-title">
+                <h2>Our Mission</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="logo.png" alt="Saraswati Puja Idol" />
+                </div>
+                <div class="about-text">
+                    <p>
+                        The Sunshine Enclave Saraswati Puja Committee, established in **2014**, is dedicated to preserving and promoting the rich cultural heritage associated with Maa Saraswati, the Goddess of knowledge and arts. Our annual festival is more than a religious ritual; it is a **community cornerstone**, fostering unity, creativity, and learning among residents of all ages.
+                    </p>
+                    <p>
+                        We strive to organize an event that is spiritually enriching, culturally vibrant, and socially inclusive. By blending traditional *puja* rites with modern community engagement, we ensure the spirit of wisdom and harmony flourishes in our Enclave.
+                    </p>
+                    <a href="#gallery" style="display: block; margin-top: 20px; font-weight: 700;">Explore Our History <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="events">
+            <div class="section-title">
+                <h2>The Puja Schedule</h2>
+            </div>
+            <div class="events-grid">
+                <div class="event-card">
+                    <h3>Saraswati Puja & Anjali</h3>
+                    <p>The main day of reverence. Join us for sacred prayers and the offering of books, pens, and musical instruments for the Goddess's blessings.</p>
+                    <div class="details"><i class="far fa-calendar-alt"></i> Date:23/01/25</div>
+                    <div class="details"><i class="far fa-clock"></i> Time:8:00 AM - 12:00 PM</div>
+                </div>
+                <div class="event-card">
+                    <h3>Cultural Evening: Swar-Sangam</h3>
+                    <p>A mesmerizing display of talent featuring classical music, dance, and drama performances by community members.</p>
+                    <div class="details"><i class="fas fa-microphone-alt"></i> **Date:** Puja Evening</div>
+                    <div class="details"><i class="far fa-clock"></i> **Time:** 6:30 PM Onwards</div>
+                </div>
+                <div class="event-card">
+                    <h3>Bhog, Prasad & Visarjan</h3>
+                    <p>Participate in the community feast (*bhog*) and the final *Visarjan* (immersion) ceremony, concluding the celebration.</p>
+                    <div class="details"><i class="fas fa-utensils"></i> Date:23/01/25</div>
+                    <div class="details"><i class="far fa-clock"></i> Time: 1:00 PM (Bhog), 3:00 PM (Visarjan):25/01/25</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <div class="section-title">
+                <h2>Visual Chronicle</h2>
+            </div>
+            <div class="gallery-grid">
+                <img src="gallery1.jpg" alt="Puja Celebration" />
+                <img src="gallery2.jpg" alt="Cultural Program" />
+                <img src="gallery3.jpg" alt="Decoration" />
+                <img src="gallery4.jpg" alt="Community Gathering" />
+                <img src="gallery5.jpg" alt="Aarti Ceremony" />
+                <img src="gallery6.jpg" alt="Prasad Distribution" />
+            </div>
+        </section>
+
+        <section id="contribute">
+            <div class="contribute-box">
+                <h3>Sponsor The Celebration</h3>
+                <p>
+                    The success of our annual event relies entirely on the generosity of our community. Your contribution directly supports the idol's creation, venue decoration, cultural arrangements, and community *bhog*.
+                </p>
+                <a href="https://your-payment-link.com" class="cta-button">Donate Securely Now <i class="fas fa-heart"></i></a>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="section-title">
+                <h2>Connect With Us</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email Address</h4>
+                    <p>
+                        <a href="mailto:sunshineenclavesaraswatipujaco@gmail.com"><strong>sunshineenclavesaraswatipujaco@gmail.com</strong></a>
+                    </p>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-phone-alt"></i>
+                    <h4>Phone & Support</h4>
+                    <p>
+                        For General Enquiries: <strong>+91-XXXXXXXXXX</strong>
+                    </p>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Puja Venue</h4>
+                    <p>
+                        Sunshine Enclave,Dimna,Mango,Jamshedpur-831018.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-logo">Sunshine Puja Committee</div>
+        <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/sunshine_puja_committee?igsh=aXExczJodGl5NDh1" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="footer-text">
+            &copy; 2014 - 2025 Sunshine Enclave Saraswati Puja Committee. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+</html>
